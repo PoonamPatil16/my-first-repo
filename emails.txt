@@ -1,0 +1,4 @@
+test@example.com
+wrong-email
+user@gmail.com
+hello@world
