@@ -1,11 +1,11 @@
-name: Run Hello Python
+name: Python Tests
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  run-python:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -16,5 +16,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Run script
-        run: python hello.py
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run tests
+        run: pytest
